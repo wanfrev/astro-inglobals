@@ -23,16 +23,16 @@ import Layout from "../layouts/Layout.astro";
 				</h1>
         <p class="max-w-2xl text-lg text-slate-700 mb-12 leading-relaxed">
 					Transformamos la certeza financiera mediante la integracion de Inteligencia Artificial y estandares globales de sostenibilidad.
-				</p>
-        <div class="flex flex-wrap gap-4 md:gap-5">
-					<a
-						href="#servicios"
-						class="px-8 py-4 bg-azulCorp text-white rounded-xl font-semibold hover:shadow-2xl hover:shadow-violetaIA/20 transition-all"
-					>
+        <div
+          class="relative md:col-span-3 p-12 md:p-20 rounded-[2.5rem] bg-gradient-to-br from-white to-slate-50 border border-slate-200 text-slate-900 shadow-xl"
+        >
+          <div class="absolute right-8 top-6 text-6xl text-slate-200/70">&quot;</div>
+          <h2 class="text-2xl font-bold text-azulCorp mb-4">Vision</h2>
+          <p class="text-slate-700 leading-relaxed italic">
 						Explorar Servicios
 					</a>
 					<a
-						href="/nosotros"
+						href="/emprendimiento"
 						class="px-8 py-4 border border-slate-300 text-azulCorp rounded-xl font-semibold hover:bg-slate-100 transition-all"
 					>
 						Nuestra Filosofia
@@ -43,7 +43,7 @@ import Layout from "../layouts/Layout.astro";
 				<div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-violetaIA/15 via-transparent to-verdeEsm/15 blur-2xl"></div>
 				<div class="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white/80 p-6 shadow-2xl">
 					<div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-slate-200 via-white to-slate-100"></div>
-					<div class="mt-6 flex items-center justify-between text-xs text-slate-500">
+          <div class="mt-6 flex items-center justify-between text-xs text-slate-600">
 						<span>Equipo + datos en tiempo real</span>
 						<span>Naturaleza + IA</span>
 					</div>
@@ -52,7 +52,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
     <section id="servicios" class="grid md:grid-cols-3 gap-8 md:gap-10">
-			<div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-violetaIA/30 transition-all group">
+      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-violetaIA/30 transition-all group">
 				<div class="w-12 h-12 bg-violetaIA/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 					<svg class="w-6 h-6 text-violetaIA" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
@@ -64,12 +64,12 @@ import Layout from "../layouts/Layout.astro";
 					</svg>
 				</div>
 				<h3 class="text-xl font-bold text-azulCorp mb-4">Smart Audit</h3>
-				<p class="text-sm text-slate-600 leading-relaxed">
+        <p class="text-sm text-slate-700 leading-relaxed">
 					Analisis integral de datos mediante Machine Learning para erradicar el error humano.
 				</p>
 			</div>
 
-			<div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-verdeEsm/30 transition-all group">
+      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-verdeEsm/30 transition-all group">
 				<div class="w-12 h-12 bg-verdeEsm/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 					<svg class="w-6 h-6 text-verdeEsm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
@@ -81,12 +81,12 @@ import Layout from "../layouts/Layout.astro";
 					</svg>
 				</div>
 				<h3 class="text-xl font-bold text-azulCorp mb-4">ESG Strategy</h3>
-				<p class="text-sm text-slate-600 leading-relaxed">
+        <p class="text-sm text-slate-700 leading-relaxed">
 					Convertimos la responsabilidad ambiental en un activo estrategico y valor financiero.
 				</p>
 			</div>
 
-			<div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-azulCorp/30 transition-all group">
+      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-azulCorp/30 transition-all group">
 				<div class="w-12 h-12 bg-azulCorp/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 					<svg class="w-6 h-6 text-azulCorp" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
@@ -104,7 +104,7 @@ import Layout from "../layouts/Layout.astro";
 					</svg>
 				</div>
 				<h3 class="text-xl font-bold text-azulCorp mb-4">Executive Academy</h3>
-				<p class="text-sm text-slate-600 leading-relaxed">
+        <p class="text-sm text-slate-700 leading-relaxed">
 					Executive Knowledge Hub para dominar la IA aplicada a la alta direccion financiera.
 				</p>
 			</div>
@@ -159,8 +159,8 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="relative md:col-span-3 p-12 md:p-20 rounded-[2.5rem] bg-azulCorp text-white shadow-xl"
       >
-        <div class="absolute right-8 top-6 text-6xl text-white/10">&quot;</div>
-        <h2 class="text-2xl font-bold mb-4">Vision</h2>
+        <div class="absolute right-8 top-6 text-6xl text-slate-200/70">&quot;</div>
+        <h2 class="text-2xl font-bold mb-4 text-azulCorp">Vision</h2>
         <p class="text-slate-200 leading-relaxed italic">
           "Ser referentes internacionales en el ecosistema Fintech, liderando la
           transicion hacia una auditoria inteligente y responsable."
@@ -239,7 +239,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section class="max-w-6xl mx-auto px-4 pb-24">
+  <section class="max-w-6xl mx-auto px-4 pt-14 pb-24">
     <div
       class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
     >
@@ -493,12 +493,12 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-3xl md:text-4xl font-bold text-azulCorp">
           Reconocimientos
         </h2>
-        <p class="text-slate-500 mt-2">
+        <p class="text-slate-600 mt-2">
           Resena breve y logos en escala de grises.
         </p>
       </div>
       <span
-        class="text-xs font-bold tracking-widest text-slate-500 uppercase bg-slate-100 px-3 py-1 rounded-full"
+        class="text-xs font-bold tracking-widest text-slate-600 uppercase bg-slate-100 px-3 py-1 rounded-full"
       >
         Professional Awards
       </span>
