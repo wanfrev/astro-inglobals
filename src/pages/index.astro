@@ -3,103 +3,89 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inicio">
-<div class="relative overflow-hidden bg-gradient-to-b from-white via-slate-50/80 to-slate-100/70 pt-10 pb-24 md:pt-14 md:pb-28">
-	<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
-		<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-violetaIA/30 rounded-full blur-[120px]"></div>
-		<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-verdeEsm/20 rounded-full blur-[120px]"></div>
-	</div>
+<div class="relative overflow-hidden bg-slate-50 pt-10 pb-24 md:pt-14 md:pb-28">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-200 rounded-full blur-[140px]"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[140px]"></div>
+  </div>
 
   <main class="max-w-6xl mx-auto px-4 space-y-16 md:space-y-20">
     <section class="grid items-center gap-14 md:gap-16 md:grid-cols-2">
       <div class="text-left">
-				<h1 class="text-4xl md:text-6xl font-extrabold text-azulCorp leading-[1.1]">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1]">
 					Auditoria inteligente para un futuro
-					<span class="text-transparent bg-clip-text bg-gradient-to-r from-violetaIA via-azulCorp to-verdeEsm animate-pulse">
+          <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] drop-shadow-sm">
 						sostenible
 					</span>
 				</h1>
-        <p class="max-w-2xl text-lg text-slate-700 mb-12 leading-relaxed">
-					Transformamos la certeza financiera mediante la integracion de Inteligencia Artificial y estandares globales de sostenibilidad.
-			</div>
+        <p class="max-w-2xl text-lg text-slate-700 mb-12 leading-relaxed mt-6">
+          Transformamos la certeza financiera mediante la integracion de Inteligencia Artificial y estandares globales de sostenibilidad.
+        </p>
+        <a href="#contacto" class="inline-block px-8 py-4 rounded-full bg-blue-950 text-white font-bold hover:bg-[#D4AF37] hover:text-blue-950 transition-all duration-300 shadow-lg shadow-blue-900/20">
+          Descubrir Soluciones
+        </a>
+      </div>
 			<div class="relative">
-				<div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-violetaIA/15 via-transparent to-verdeEsm/15 blur-2xl"></div>
-				<div class="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white/80 p-6 shadow-2xl">
-					<div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-slate-200 via-white to-slate-100"></div>
+        <div class="absolute -inset-1 rounded-[2.6rem] bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] opacity-30 blur-sm"></div>
+        <div class="relative overflow-hidden rounded-[2.5rem] border border-amber-200/50 bg-white p-2 shadow-2xl">
+          <div class="relative aspect-[4/3] w-full rounded-2xl bg-blue-950 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent z-10"></div>
+            <span class="text-amber-200/20 text-8xl font-black">IS</span>
+          </div>
 				</div>
 			</div>
 		</section>
 
     <section id="servicios" class="grid md:grid-cols-3 gap-8 md:gap-10">
-      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-violetaIA/30 transition-all group">
-				<div class="w-12 h-12 bg-violetaIA/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-					<svg class="w-6 h-6 text-violetaIA" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z"
-						></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-bold text-azulCorp mb-4">Smart Audit</h3>
-        <p class="text-sm text-slate-700 leading-relaxed">
-					Analisis integral de datos mediante Machine Learning para erradicar el error humano.
-				</p>
-			</div>
+      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
+        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
+          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-950 mb-4">Smart Audit</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Analisis integral de datos mediante Machine Learning para erradicar el error humano.
+        </p>
+      </div>
 
-      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-verdeEsm/30 transition-all group">
-				<div class="w-12 h-12 bg-verdeEsm/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-					<svg class="w-6 h-6 text-verdeEsm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-						></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-bold text-azulCorp mb-4">ESG Strategy</h3>
-        <p class="text-sm text-slate-700 leading-relaxed">
-					Convertimos la responsabilidad ambiental en un activo estrategico y valor financiero.
-				</p>
-			</div>
+      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
+        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
+          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-950 mb-4">ESG Strategy</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Convertimos la responsabilidad ambiental en un activo estrategico y valor financiero.
+        </p>
+      </div>
 
-      <div class="p-8 bg-white/90 border border-slate-200/70 rounded-3xl shadow-sm hover:shadow-xl hover:border-azulCorp/30 transition-all group">
-				<div class="w-12 h-12 bg-azulCorp/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-					<svg class="w-6 h-6 text-azulCorp" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M12 14l9-5-9-5-9 5 9 5z"
-						></path>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-						></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-bold text-azulCorp mb-4">Executive Academy</h3>
-        <p class="text-sm text-slate-700 leading-relaxed">
-					Executive Knowledge Hub para dominar la IA aplicada a la alta direccion financiera.
-				</p>
-			</div>
-		</section>
+      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
+        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
+          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-950 mb-4">Executive Academy</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Executive Knowledge Hub para dominar la IA aplicada a la alta direccion financiera.
+        </p>
+      </div>
+    </section>
 	</main>
 </div>
 
   <section class="relative py-24 md:py-32 overflow-hidden bg-slate-50">
     <div
-      class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+      class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
     >
       <div
-        class="absolute -top-24 -left-24 w-96 h-96 bg-violetaIA rounded-full blur-[120px]"
+        class="absolute -top-24 -left-24 w-96 h-96 bg-amber-200 rounded-full blur-[120px]"
       >
       </div>
       <div
-        class="absolute -bottom-24 -right-24 w-96 h-96 bg-verdeEsm rounded-full blur-[120px]"
+        class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-900/20 rounded-full blur-[120px]"
       >
       </div>
     </div>
@@ -109,16 +95,16 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="max-w-6xl mx-auto px-4 relative z-10">
       <span
-        class="text-xs font-bold tracking-[0.3em] text-azulCorp uppercase mb-4 block"
+        class="text-xs font-bold tracking-[0.3em] text-blue-950 uppercase mb-4 block"
       >
         Nuestra Identidad
       </span>
       <h1
-        class="text-4xl md:text-6xl font-black text-azulCorp mb-8 leading-tight"
+        class="text-4xl md:text-6xl font-black text-blue-950 mb-8 leading-tight"
       >
         El Futuro de la Confianza es <br />
         <span
-          class="bg-clip-text bg-gradient-to-r from-violetaIA to-verdeEsm"
+          class="bg-clip-text bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C]"
         >
           Inteligente y Sostenible
         </span>
@@ -135,20 +121,20 @@ import Layout from "../layouts/Layout.astro";
   <section class="max-w-6xl mx-auto px-4 py-16">
     <div class="grid items-start gap-8 md:grid-cols-5">
       <div
-        class="relative md:col-span-3 p-12 md:p-20 rounded-[2.5rem] bg-azulCor shadow-xl"
+        class="relative md:col-span-3 p-12 md:p-20 rounded-[2.5rem] bg-blue-950 text-white shadow-xl"
       >
         <div class="absolute right-8 top-6 text-6xl text-slate-200/70">&quot;</div>
-        <h2 class="text-2xl font-bold mb-4 text-azulCorp">Vision</h2>
-        <p class="text-slate-700 leading-relaxed italic">
+        <h2 class="text-2xl font-bold mb-4 text-white">Vision</h2>
+        <p class="text-slate-200 leading-relaxed italic">
           "Ser referentes internacionales en el ecosistema Fintech, liderando la
           transicion hacia una auditoria inteligente y responsable."
         </p>
       </div>
       <div
-        class="relative md:col-span-2 p-10 md:p-12 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50"
+        class="relative md:col-span-2 p-10 md:p-12 rounded-[2rem] bg-white border border-amber-200/40 shadow-xl shadow-slate-200/50"
       >
-        <div class="absolute right-6 top-5 text-6xl text-slate-200/70">&quot;</div>
-        <h2 class="text-2xl font-bold text-azulCorp mb-4">Mision</h2>
+        <div class="absolute right-6 top-5 text-6xl text-amber-200/50">&quot;</div>
+        <h2 class="text-2xl font-bold text-blue-950 mb-4">Mision</h2>
         <p class="text-slate-700 leading-relaxed italic">
           "Transformar la practica contable mediante la integracion de
           inteligencia artificial y estandares de sostenibilidad, impulsando la
@@ -158,7 +144,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section class="relative py-24 md:py-32 bg-slate-950 overflow-hidden">
+  <section class="relative py-24 md:py-32 bg-blue-950 overflow-hidden">
     <div
       class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px]"
     ></div>
@@ -175,7 +161,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="grid md:grid-cols-3 gap-12">
         <div class="group text-center">
           <div
-            class="text-7xl font-black text-white/20 group-hover:text-violetaIA/10 transition-colors duration-500 mb-[-1.5rem] select-none"
+            class="text-7xl font-black text-white/20 group-hover:text-[#D4AF37]/20 transition-colors duration-500 mb-[-1.5rem] select-none"
           >
             S
           </div>
@@ -189,7 +175,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="group text-center">
           <div
-            class="text-7xl font-black text-white/20 group-hover:text-verdeEsm/10 transition-colors duration-500 mb-[-1.5rem] select-none"
+            class="text-7xl font-black text-white/20 group-hover:text-[#D4AF37]/20 transition-colors duration-500 mb-[-1.5rem] select-none"
           >
             S
           </div>
@@ -201,7 +187,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="group text-center">
           <div
-            class="text-7xl font-black text-white/20 group-hover:text-azulCorp/10 transition-colors duration-500 mb-[-1.5rem] select-none"
+            class="text-7xl font-black text-white/20 group-hover:text-[#D4AF37]/20 transition-colors duration-500 mb-[-1.5rem] select-none"
           >
             S
           </div>
@@ -222,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
       class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
     >
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-azulCorp">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-950">
           Ecosistema de Servicios
         </h2>
         <p class="text-slate-600 mt-2">
@@ -233,13 +219,13 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="grid gap-8 md:grid-cols-3">
       <div
-        class="group relative p-8 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+        class="group relative p-8 rounded-[2rem] bg-white/90 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
       >
         <div
-          class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity"
+          class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"
         >
           <svg
-            class="w-8 h-8 text-violetaIA"
+            class="w-8 h-8 text-[#D4AF37]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -252,7 +238,7 @@ import Layout from "../layouts/Layout.astro";
             ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-azulCorp mb-3">
+        <h3 class="text-xl font-bold text-blue-950 mb-3">
           Smart Audit & Algorithmic Assurance
         </h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-6">
@@ -276,20 +262,20 @@ import Layout from "../layouts/Layout.astro";
           </li>
         </ul>
         <p class="mt-6 text-xs text-slate-700">
-          <span class="font-semibold text-azulCorp">El Diferencial:</span>
+          <span class="font-semibold text-blue-950">El Diferencial:</span>
           No solo validamos el pasado; entregamos inteligencia accionable para asegurar
           la rentabilidad futura de su organizacion.
         </p>
       </div>
 
       <div
-        class="group relative p-8 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+        class="group relative p-8 rounded-[2rem] bg-white/90 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
       >
         <div
-          class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity"
+          class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"
         >
           <svg
-            class="w-8 h-8 text-verdeEsm"
+            class="w-8 h-8 text-[#D4AF37]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -302,7 +288,7 @@ import Layout from "../layouts/Layout.astro";
             ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-azulCorp mb-3">
+        <h3 class="text-xl font-bold text-blue-950 mb-3">
           ESG Strategy & Sustainable Governance
         </h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-6">
@@ -324,20 +310,20 @@ import Layout from "../layouts/Layout.astro";
           </li>
         </ul>
         <p class="mt-6 text-xs text-slate-700">
-          <span class="font-semibold text-azulCorp">El Diferencial:</span>
+          <span class="font-semibold text-blue-950">El Diferencial:</span>
           Convertimos la responsabilidad corporativa en un activo estrategico que
           atrae inversion y fideliza al consumidor consciente.
         </p>
       </div>
 
       <div
-        class="group relative p-8 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+        class="group relative p-8 rounded-[2rem] bg-white/90 backdrop-blur-xl border border-slate-200/70 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
       >
         <div
-          class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity"
+          class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity"
         >
           <svg
-            class="w-8 h-8 text-azulCorp"
+            class="w-8 h-8 text-[#D4AF37]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -350,7 +336,7 @@ import Layout from "../layouts/Layout.astro";
             ></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-azulCorp mb-3">
+        <h3 class="text-xl font-bold text-blue-950 mb-3">
           InglobalS Academy: Executive Hub
         </h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-6">
@@ -373,7 +359,7 @@ import Layout from "../layouts/Layout.astro";
           </li>
         </ul>
         <p class="mt-6 text-xs text-slate-700">
-          <span class="font-semibold text-azulCorp">El Diferencial:</span>
+          <span class="font-semibold text-blue-950">El Diferencial:</span>
           No ensenamos teoria; transferimos nuestra metodologia de campo a sus equipos,
           garantizando una curva de aprendizaje inmediata y aplicable.
         </p>
@@ -382,26 +368,26 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <section
-    class="relative bg-gradient-to-r from-azulCorp via-slate-900 to-slate-950 py-16 overflow-hidden"
+    class="relative bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 py-16 overflow-hidden"
   >
     <div
       class="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(to_right,#94a3b8_1px,transparent_1px),linear-gradient(to_bottom,#94a3b8_1px,transparent_1px)] [background-size:36px_36px]"
     ></div>
     <div class="max-w-6xl mx-auto px-4 grid gap-8 text-center md:grid-cols-3">
       <div class="text-white">
-        <div class="text-3xl font-bold text-verdeEsm">+X anos</div>
+        <div class="text-3xl font-bold text-[#D4AF37]">+X anos</div>
         <p class="mt-2 text-xs uppercase tracking-widest text-slate-200">
           Experiencia ejecutiva
         </p>
       </div>
       <div class="text-white">
-        <div class="text-3xl font-bold text-violetaIA">100% IA</div>
+        <div class="text-3xl font-bold text-[#D4AF37]">100% IA</div>
         <p class="mt-2 text-xs uppercase tracking-widest text-slate-200">
           Metodologias inteligentes
         </p>
       </div>
       <div class="text-white">
-        <div class="text-3xl font-bold text-white">Agenda 2030</div>
+        <div class="text-3xl font-bold text-[#D4AF37]">Agenda 2030</div>
         <p class="mt-2 text-xs uppercase tracking-widest text-slate-200">
           Compromiso global
         </p>
@@ -412,7 +398,7 @@ import Layout from "../layouts/Layout.astro";
   <section class="max-w-6xl mx-auto px-4 py-24 md:py-32">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-azulCorp">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-950">
           Reconocimientos
         </h2>
       </div>
