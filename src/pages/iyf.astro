@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const image1 = new URL('../assets/image1diplomado.jpeg', import.meta.url).href;
+const image2 = new URL('../assets/image2diplomado.jpeg', import.meta.url).href;
 ---
 
 <Layout title="Emprendimiento y CEO">
@@ -56,8 +58,34 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 			</div>
+
+			<!-- Carrusel / galería debajo del video -->
+			<div class="col-span-2 mt-8">
+				<div class="relative">
+					<div id="diplomaGallery" class="flex gap-4 overflow-x-auto snap-x snap-mandatory py-4">
+						<img src={image1} alt="Imagen diplomado 1" class="w-[280px] md:w-[380px] lg:w-[480px] rounded-xl object-cover snap-center flex-shrink-0 shadow-lg" />
+						<img src={image2} alt="Imagen diplomado 2" class="w-[280px] md:w-[380px] lg:w-[480px] rounded-xl object-cover snap-center flex-shrink-0 shadow-lg" />
+					</div>
+
+					<div class="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20">
+						<button id="diplomaPrev" class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform">‹</button>
+						<button id="diplomaNext" class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform">›</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
+
+	<script type="module">
+		const container = document.getElementById('diplomaGallery');
+		const prev = document.getElementById('diplomaPrev');
+		const next = document.getElementById('diplomaNext');
+		if (container && prev && next) {
+			const scrollAmount = () => Math.round(container.clientWidth * 0.8);
+			prev.addEventListener('click', () => container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+			next.addEventListener('click', () => container.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+		}
+	</script>
 
 	<section class="relative py-24 md:py-32 overflow-hidden bg-slate-50">
 		<div class="absolute inset-0 opacity-20 pointer-events-none">
