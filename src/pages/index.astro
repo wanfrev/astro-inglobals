@@ -1,83 +1,178 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const fedecamaras = "/img/fedecamaras.png";
+const federacion = "/img/federacion.jpeg";
 ---
 
 <Layout title="Inicio">
-<div class="relative overflow-hidden bg-slate-50 pt-10 pb-24 md:pt-14 md:pb-28">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20">
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-200 rounded-full blur-[140px]"></div>
-    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[140px]"></div>
-  </div>
-
-  <main class="max-w-6xl mx-auto px-4 space-y-16 md:space-y-20">
-
-    <section class="grid items-center gap-14 md:gap-16 md:grid-cols-2">
-      <div class="text-left">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1]">
-					Auditoria inteligente para un futuro
-          <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] drop-shadow-sm">
-						sostenible
-					</span>
-				</h1>
-        <p class="max-w-2xl text-lg text-slate-700 mb-12 leading-relaxed mt-6">
-          Transformamos la certeza financiera mediante la integracion de Inteligencia Artificial y estandares globales de sostenibilidad.
-        </p>
+  <div
+    class="relative overflow-hidden bg-slate-50 pt-10 pb-24 md:pt-14 md:pb-28"
+  >
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20"
+    >
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-200 rounded-full blur-[140px]"
+      >
       </div>
-			<div class="relative">
-        <div class="absolute -inset-1 rounded-[2.6rem] bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] opacity-30 blur-sm"></div>
-        <div class="relative overflow-hidden rounded-[2.5rem] border border-amber-200/50 bg-white p-2 shadow-2xl">
-          <div class="relative aspect-[4/3] w-full rounded-2xl bg-blue-950 flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent z-10"></div>
-            <span class="text-amber-200/20 text-8xl font-black">IS</span>
+      <div
+        class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[140px]"
+      >
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 space-y-16 md:space-y-20">
+      <section class="grid items-center gap-14 md:gap-16 md:grid-cols-2">
+        <div class="text-left">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1]"
+          >
+            Auditoria inteligente para un futuro
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] drop-shadow-sm"
+            >
+              sostenible
+            </span>
+          </h1>
+          <p
+            class="max-w-2xl text-lg text-slate-700 mb-12 leading-relaxed mt-6"
+          >
+            Transformamos la certeza financiera mediante la integracion de
+            Inteligencia Artificial y estandares globales de sostenibilidad.
+          </p>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -inset-1 rounded-[2.6rem] bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] opacity-30 blur-sm"
+          >
           </div>
-				</div>
-			</div>
-		</section>
-
-    <section id="servicios" class="grid md:grid-cols-3 gap-8 md:gap-10">
-      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
-        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
-          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="12" width="3.5" height="7" rx="0.6" fill="currentColor" />
-            <rect x="9.25" y="8" width="3.5" height="11" rx="0.6" fill="currentColor" />
-            <rect x="15.5" y="5" width="3.5" height="14" rx="0.6" fill="currentColor" />
-          </svg>
+          <div
+            class="relative overflow-hidden rounded-[2.5rem] border border-amber-200/50 bg-white p-2 shadow-2xl"
+          >
+            <div
+              class="relative aspect-[4/3] w-full rounded-2xl bg-blue-950 flex items-center justify-center overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent z-10"
+              >
+              </div>
+              <span class="text-amber-200/20 text-8xl font-black">IS</span>
+            </div>
+          </div>
         </div>
-        <h3 class="text-xl font-bold text-blue-950 mb-4">Smart Audit</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Analisis integral de datos mediante Machine Learning para erradicar el error humano.
-        </p>
-      </div>
+      </section>
 
-      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
-        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
-          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 11c0 5-8 11-11 11S3 16 3 11 10 2 12 2s9 3 9 9z" fill="currentColor" />
-            <path d="M8 12c2-2 6-2 8 0" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+      <section id="servicios" class="grid md:grid-cols-3 gap-8 md:gap-10">
+        <div
+          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
+        >
+          <div
+            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="12"
+                width="3.5"
+                height="7"
+                rx="0.6"
+                fill="currentColor"></rect>
+              <rect
+                x="9.25"
+                y="8"
+                width="3.5"
+                height="11"
+                rx="0.6"
+                fill="currentColor"></rect>
+              <rect
+                x="15.5"
+                y="5"
+                width="3.5"
+                height="14"
+                rx="0.6"
+                fill="currentColor"></rect>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-4">Smart Audit</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Analisis integral de datos mediante Machine Learning para erradicar
+            el error humano.
+          </p>
         </div>
-        <h3 class="text-xl font-bold text-blue-950 mb-4">ESG Strategy</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Convertimos la responsabilidad ambiental en un activo estrategico y valor financiero.
-        </p>
-      </div>
 
-      <div class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
-        <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
-          <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L2 8l10 5 10-5-10-5z" fill="currentColor" />
-            <path d="M7 13v4a5 5 0 0010 0v-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M12 13v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <div
+          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
+        >
+          <div
+            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 11c0 5-8 11-11 11S3 16 3 11 10 2 12 2s9 3 9 9z"
+                fill="currentColor"></path>
+              <path
+                d="M8 12c2-2 6-2 8 0"
+                stroke="rgba(255,255,255,0.9)"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-4">ESG Strategy</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Convertimos la responsabilidad ambiental en un activo estrategico y
+            valor financiero.
+          </p>
         </div>
-        <h3 class="text-xl font-bold text-blue-950 mb-4">Executive Academy</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Executive Knowledge Hub para dominar la IA aplicada a la alta direccion financiera.
-        </p>
-      </div>
-    </section>
-	</main>
-</div>
+
+        <div
+          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
+        >
+          <div
+            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 3L2 8l10 5 10-5-10-5z" fill="currentColor"></path>
+              <path
+                d="M7 13v4a5 5 0 0010 0v-4"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M12 13v8"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-4">
+            Executive Academy
+          </h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Executive Knowledge Hub para dominar la IA aplicada a la alta
+            direccion financiera.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <section class="relative py-24 md:py-32 overflow-hidden bg-slate-50">
     <div
@@ -94,7 +189,8 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div
       class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:28px_28px]"
-    ></div>
+    >
+    </div>
 
     <div class="max-w-6xl mx-auto px-4 relative z-10">
       <span
@@ -126,7 +222,9 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="relative md:col-span-3 p-12 md:p-20 rounded-[2.5rem] bg-blue-950 text-white shadow-xl"
       >
-        <div class="absolute right-8 top-6 text-6xl text-slate-200/70">&quot;</div>
+        <div class="absolute right-8 top-6 text-6xl text-slate-200/70">
+          &quot;
+        </div>
         <h2 class="text-2xl font-bold mb-4 text-white">Vision</h2>
         <p class="text-slate-200 leading-relaxed italic">
           "Ser referentes internacionales en el ecosistema Fintech, liderando la
@@ -136,7 +234,9 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="relative md:col-span-2 p-10 md:p-12 rounded-[2rem] bg-white border border-amber-200/40 shadow-xl shadow-slate-200/50"
       >
-        <div class="absolute right-6 top-5 text-6xl text-amber-200/50">&quot;</div>
+        <div class="absolute right-6 top-5 text-6xl text-amber-200/50">
+          &quot;
+        </div>
         <h2 class="text-2xl font-bold text-blue-950 mb-4">Mision</h2>
         <p class="text-slate-700 leading-relaxed italic">
           "Transformar la practica contable mediante la integracion de
@@ -150,7 +250,8 @@ import Layout from "../layouts/Layout.astro";
   <section class="relative py-24 md:py-32 bg-blue-950 overflow-hidden">
     <div
       class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px]"
-    ></div>
+    >
+    </div>
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl font-bold text-white">
@@ -375,7 +476,8 @@ import Layout from "../layouts/Layout.astro";
   >
     <div
       class="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(to_right,#94a3b8_1px,transparent_1px),linear-gradient(to_bottom,#94a3b8_1px,transparent_1px)] [background-size:36px_36px]"
-    ></div>
+    >
+    </div>
     <div class="max-w-6xl mx-auto px-4 grid gap-8 text-center md:grid-cols-3">
       <div class="text-white">
         <div class="text-3xl font-bold text-[#D4AF37]">+X anos</div>
@@ -399,38 +501,19 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <section class="max-w-6xl mx-auto px-4 py-24 md:py-32">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <div class="flex flex-col md:flex-row md:items-end justify-center items-center gap-4">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-950">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-950 text-center">
           Reconocimientos
         </h2>
       </div>
     </div>
-    <div class="mt-10 flex gap-6 overflow-x-auto pb-4">
-      <div
-        class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-white text-xs uppercase tracking-widest text-slate-400 grayscale"
-      >
-        Logo 01
+      <div class="mt-10 flex gap-6 overflow-x-auto pb-4 justify-center">
+      <div class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-gold-solid text-xs uppercase tracking-widest text-slate-400 grayscale">
+        <img src={fedecamaras} alt="Fedecamaras diploma" class="max-h-12 object-contain" />
       </div>
-      <div
-        class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-white text-xs uppercase tracking-widest text-slate-400 grayscale"
-      >
-        Logo 02
-      </div>
-      <div
-        class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-white text-xs uppercase tracking-widest text-slate-400 grayscale"
-      >
-        Logo 03
-      </div>
-      <div
-        class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-white text-xs uppercase tracking-widest text-slate-400 grayscale"
-      >
-        Logo 04
-      </div>
-      <div
-        class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-white text-xs uppercase tracking-widest text-slate-400 grayscale"
-      >
-        Logo 05
+      <div class="flex h-16 w-40 items-center justify-center rounded-2xl border border-slate-200 bg-gold-solid text-xs uppercase tracking-widest text-slate-400 grayscale">
+        <img src={federacion} alt="Fedecamaras diploma" class="max-h-12 object-contain" />
       </div>
     </div>
   </section>
