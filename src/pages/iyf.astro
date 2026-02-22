@@ -8,6 +8,8 @@ const metrica1 = "/img/metrica1.jpeg";
 const metrica2 = "/img/metrica2.jpeg";
 const metrica3 = "/img/metrica3.jpeg";
 const resultados = "/img/resultados_dispositivo.jpeg";
+const reconocimiento1 = "/img/reconocimiento1.jpeg";
+const reconocimiento2 = "/img/reconocimiento2.jpeg";
 ---
 
 <Layout title="Emprendimiento y CEO">
@@ -301,42 +303,48 @@ const resultados = "/img/resultados_dispositivo.jpeg";
       <!-- Galería específica: dispositivo (izq grande), resultados (der grande), métricas abajo -->
       <div class="max-w-7xl mx-auto px-6 mt-8 col-span-2">
         <div class="grid md:grid-cols-2 gap-6 items-start">
-          <div class="rounded-xl overflow-hidden bg-black shadow-xl">
+          <div class="rounded-xl overflow-hidden bg-white shadow-xl">
             <img
               src={dispositivo}
               alt="Dispositivo"
               loading="lazy"
-              class="w-full h-64 md:h-96 object-cover rounded-xl"
+              class="w-full h-56 md:h-80 object-contain"
             />
           </div>
-          <div class="rounded-xl overflow-hidden bg-black shadow-xl">
+          <div class="rounded-xl overflow-hidden bg-white shadow-xl">
             <img
               src={resultados}
               alt="Resultados del dispositivo"
               loading="lazy"
-              class="w-full h-64 md:h-96 object-cover rounded-xl"
+              class="w-full h-56 md:h-80 object-contain"
             />
           </div>
         </div>
         <div class="mt-6 grid grid-cols-3 gap-4">
-          <img
-            src={metrica1}
-            alt="Métrica 1"
-            loading="lazy"
-            class="w-full h-28 object-cover rounded-lg shadow"
-          />
-          <img
-            src={metrica2}
-            alt="Métrica 2"
-            loading="lazy"
-            class="w-full h-28 object-cover rounded-lg shadow"
-          />
-          <img
-            src={metrica3}
-            alt="Métrica 3"
-            loading="lazy"
-            class="w-full h-28 object-cover rounded-lg shadow"
-          />
+          <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
+            <img
+              src={metrica1}
+              alt="Métrica 1"
+              loading="lazy"
+              class="w-full h-48 md:h-64 object-contain"
+            />
+          </div>
+          <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
+            <img
+              src={metrica2}
+              alt="Métrica 2"
+              loading="lazy"
+              class="w-full h-48 md:h-64 object-contain"
+            />
+          </div>
+          <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
+            <img
+              src={metrica3}
+              alt="Métrica 3"
+              loading="lazy"
+              class="w-full h-48 md:h-64 object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -378,21 +386,13 @@ const resultados = "/img/resultados_dispositivo.jpeg";
       </div>
 
       <div
-        class="relative group rounded-[2.5rem] overflow-hidden bg-slate-100 aspect-[4/3] border border-amber-200/60 shadow-2xl flex items-center justify-center"
+        class="relative group rounded-[2.5rem] overflow-hidden bg-white aspect-[4/3] border border-amber-200/60 shadow-2xl"
       >
-        <div
-          class="text-center text-slate-600 group-hover:scale-110 transition-transform duration-500 z-10"
-        >
-          <img
-            src={image3}
-            alt="Foto del Evento LUZ"
-            class="w-16 h-16 mx-auto mb-4 opacity-90 rounded-full object-cover shadow-md"
-          />
-          <span
-            class="text-sm font-semibold uppercase tracking-widest px-4 block"
-            >Espacio: Foto del Evento LUZ</span
-          >
-        </div>
+        <img
+          src={image3}
+          alt="Foto del Evento LUZ"
+          class="w-full h-full object-contain"
+        />
       </div>
     </div>
   </section>
@@ -408,69 +408,12 @@ const resultados = "/img/resultados_dispositivo.jpeg";
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <div
-        class="relative group rounded-[2rem] bg-white border border-amber-200/40 shadow-sm aspect-[4/3] flex items-center justify-center overflow-hidden hover:shadow-xl transition-all"
-      >
-        <div class="text-center text-slate-600">
-          <svg
-            class="w-10 h-10 mx-auto mb-3 opacity-50"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
-          >
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest block px-4"
-            >Certificado Decimas Jornadas</span
-          >
-        </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="relative rounded-[2rem] bg-white border border-amber-200/40 shadow-sm flex items-center justify-center overflow-hidden hover:shadow-xl transition-all h-96">
+        <img src={reconocimiento1} alt="Reconocimiento 1" class="h-[350px] w-auto object-contain" />
       </div>
-      <div
-        class="relative group rounded-[2rem] bg-white border border-amber-200/40 shadow-sm aspect-[4/3] flex items-center justify-center overflow-hidden hover:shadow-xl transition-all"
-      >
-        <div class="text-center text-slate-600">
-          <svg
-            class="w-10 h-10 mx-auto mb-3 opacity-50"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
-          >
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest block px-4"
-            >Certificado IX Congreso Int.</span
-          >
-        </div>
-      </div>
-      <div
-        class="relative group rounded-[2rem] bg-white border border-amber-200/40 shadow-sm aspect-[4/3] flex items-center justify-center overflow-hidden hover:shadow-xl transition-all"
-      >
-        <div class="text-center text-slate-600">
-          <svg
-            class="w-10 h-10 mx-auto mb-3 opacity-50"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
-          >
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest block px-4"
-            >Certificado VIII Congreso Nacional</span
-          >
-        </div>
+      <div class="relative rounded-[2rem] bg-white border border-amber-200/40 shadow-sm flex items-center justify-center overflow-hidden hover:shadow-xl transition-all h-96">
+        <img src={reconocimiento2} alt="Reconocimiento 2" class="h-[350px] w-auto object-contain" />
       </div>
     </div>
   </section>
