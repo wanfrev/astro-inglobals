@@ -1,203 +1,44 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-const image1 = "/img/image1diplomado.jpeg";
-const image2 = "/img/image2diplomado.jpeg";
-const image3 = "/img/image3.jpeg";
-const dispositivo = "/img/dispositivo.jpeg";
-const metrica1 = "/img/metrica1.jpeg";
-const metrica2 = "/img/metrica2.jpeg";
-const metrica3 = "/img/metrica3.jpeg";
-const resultados = "/img/resultados_dispositivo.jpeg";
-const reconocimiento1 = "/img/reconocimiento1.jpeg";
-const reconocimiento2 = "/img/reconocimiento2.jpeg";
+import dispositivo from "../assets/dispositivo.jpeg";
+import image1 from "../assets/image1diplomado.jpeg";
+import image2 from "../assets/image2diplomado.jpeg";
+import image3 from "../assets/image3.jpeg";
+import libro0 from "../assets/libro0.jpeg";
+import libro1 from "../assets/libro1.jpeg";
+import libro3 from "../assets/libro3.jpeg";
+import libro4 from "../assets/libro4.jpeg";
+import libroportada from "../assets/libroportada.jpeg";
+import luz1 from "../assets/luz1.jpeg";
+import metrica1 from "../assets/metrica1.jpeg";
+import metrica2 from "../assets/metrica2.jpeg";
+import metrica3 from "../assets/metrica3.jpeg";
+import reconocimiento1 from "../assets/reconocimiento1.jpeg";
+import reconocimiento2 from "../assets/reconocimiento2.jpeg";
+import resultados from "../assets/resultados_dispositivo.jpeg";
+import urbeLogo from "../assets/URBE_LOGO.png";
+import luzLogo from "../assets/Logo_LUZ.gif";
 ---
 
 <Layout title="Emprendimiento y CEO">
-  <section
-    class="py-28 md:py-36 bg-blue-950 relative overflow-visible"
-  >
-    <div
-      class="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/6 blur-[120px] -z-0"
-    >
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="grid gap-10 md:grid-cols-2 items-center">
-        <div class="text-left">
-          <span class="text-xs font-bold tracking-widest text-amber-200 uppercase">
-            Formacion Profesional
-          </span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-white">
-            DIPLOMADO: Documentos de Auditoría Sostenible + IA
-          </h2>
-          <div
-            class="w-28 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mt-4"
-          >
-          </div>
-          <h3 class="mt-6 text-lg font-semibold text-amber-200">
-            Justificación del Diplomado
-          </h3>
-          <p
-            class="mt-2 text-sm md:text-base text-slate-300 leading-relaxed max-w-xl"
-          >
-            Hoy las organizaciones a nivel global fomentan las actividades
-            profesionales —especialmente del área financiera— a alinear sus
-            esfuerzos con las instituciones educativas para configurar nuevo
-            conocimiento sobre las tendencias y herramientas tecnológicas (IA),
-            basadas en la ética y con enfoque de sostenibilidad. Este diplomado,
-            "Documentos de Auditoría Sostenible + IA", responde a esa necesidad,
-            generando paradigmas prácticos y metodologías basadas en casos que
-            desarrollan competencias profesionales y ofertan talento humano
-            acorde con la realidad 4.0.
-          </p>
-
-          <h3 class="mt-4 text-lg font-semibold text-amber-200">
-            Objetivo General
-          </h3>
-          <p
-            class="mt-2 text-sm md:text-base text-slate-300 leading-relaxed max-w-xl"
-          >
-            Formar profesionales y estudiantes con ética y principios basados en
-            la sostenibilidad en el área de la auditoría, tanto del Sector
-            Público como Privado, capaces de desarrollar nuevos paradigmas y
-            habilidades cognitivas adaptándose a los entornos digitales en
-            constante evolución.
-          </p>
-
-          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
-            <div>
-              <span class="block text-xs font-bold text-amber-200 uppercase"
-                >Duración</span
-              >
-              <span class="text-sm text-slate-300">192 horas académicas</span>
-            </div>
-            <div>
-              <span class="block text-xs font-bold text-amber-200 uppercase"
-                >Modalidad</span
-              >
-              <ul class="text-sm text-slate-300 list-inside list-disc">
-                <li>Intensivo: de lunes a viernes</li>
-                <li>Semi Intensivo: Sabatino</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative group">
-          <div
-            class="absolute -inset-2 rounded-[2.6rem] bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] opacity-25 blur-md group-hover:opacity-40 transition-opacity"
-          >
-          </div>
-          <div
-            class="relative rounded-[2rem] overflow-hidden bg-black shadow-2xl"
-          >
-            <div class="w-full h-[240px] md:h-[360px] lg:h-[420px]">
-              <video
-                controls
-                preload="metadata"
-                class="w-full h-full object-cover"
-                poster="/img/image1diplomado.jpeg"
-              >
-                <source src="/videos/diplomado.mp4" type="video/mp4" />
-                <p class="text-white p-4">
-                  Tu navegador no soporta videos, por favor actualízalo.
-                </p>
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Carrusel / galería debajo del video -->
-      <div class="col-span-2 mt-8">
-        <div class="relative">
-          <div
-            id="diplomaGallery"
-            class="flex gap-4 overflow-x-auto snap-x snap-mandatory py-4 scroll-smooth"
-          >
-            <div
-              data-slide
-              class="w-[280px] md:w-[380px] lg:w-[480px] flex-shrink-0 snap-center"
-            >
-              <div
-                class="aspect-[4/3] rounded-xl bg-white p-3 shadow-lg border border-amber-200/40 flex items-center justify-center"
-              >
-                <img
-                  src={image1}
-                  alt="Imagen diplomado 1"
-                  class="max-h-full w-full object-contain"
-                />
-              </div>
-            </div>
-            <div
-              data-slide
-              class="w-[280px] md:w-[380px] lg:w-[480px] flex-shrink-0 snap-center"
-            >
-              <div
-                class="aspect-[4/3] rounded-xl bg-white p-3 shadow-lg border border-amber-200/40 flex items-center justify-center"
-              >
-                <img
-                  src={image2}
-                  alt="Imagen diplomado 2"
-                  class="max-h-full w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20"
-          >
-            <button
-              id="diplomaPrev"
-              class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform"
-              >‹</button
-            >
-            <button
-              id="diplomaNext"
-              class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform"
-              >›</button
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="module">
-    const container = document.getElementById("diplomaGallery");
-    const prev = document.getElementById("diplomaPrev");
-    const next = document.getElementById("diplomaNext");
-    if (container && prev && next) {
-      const getGap = () => {
-        const styles = getComputedStyle(container);
-        const gap = styles.columnGap || styles.gap || "0px";
-        return Number.parseFloat(gap) || 0;
-      };
-      const getSlideWidth = () => {
-        const slide = container.querySelector("[data-slide]");
-        if (!slide) {
-          return container.clientWidth;
-        }
-        return Math.round(slide.getBoundingClientRect().width + getGap());
-      };
-      prev.addEventListener("click", () =>
-        container.scrollBy({ left: -getSlideWidth(), behavior: "smooth" }),
-      );
-      next.addEventListener("click", () =>
-        container.scrollBy({ left: getSlideWidth(), behavior: "smooth" }),
-      );
-    }
-  </script>
-
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold tracking-[0.3em] text-[#996515] uppercase">
+          Vinculos Institucionales
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black text-blue-950 mt-3">
+          Alianzas Academicas
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
+      </div>
       <details class="group rounded-2xl border border-amber-200/60 bg-white shadow-sm">
         <summary class="list-none cursor-pointer px-6 py-6">
           <div class="grid md:grid-cols-2 gap-10 items-center">
             <div class="flex items-center justify-center">
-              <img
-                src="/img/Logo_LUZ.gif"
+              <Image
+                src={luzLogo}
                 alt="Logo LUZ"
                 loading="lazy"
                 class="w-48 md:w-60 h-auto object-contain"
@@ -209,8 +50,7 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
                   Universidad del Zulia (LUZ)
                 </h3>
                 <p class="text-slate-700 leading-relaxed">
-                  Informacion institucional y aporte academico del convenio con el
-                  diplomado y las iniciativas de investigacion.
+                  
                 </p>
               </div>
               <span
@@ -225,8 +65,8 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
         <div class="border-t border-amber-200/60 px-6 pb-8 pt-6">
           <div class="grid md:grid-cols-2 gap-8 items-start">
             <div class="flex items-center justify-center">
-              <img
-                src="/img/luz1.jpeg"
+              <Image
+                src={luz1}
                 alt="Invitacion Postgrado LUZ"
                 loading="lazy"
                 class="w-full max-w-sm h-auto object-contain"
@@ -266,64 +106,234 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
               </p>
             </div>
           </div>
+          <div class="mt-10 rounded-2xl border border-amber-200/60 bg-white p-6 shadow-sm">
+            <h4 class="text-lg md:text-xl font-bold text-blue-950 mb-4">
+              Bibliografia
+            </h4>
+            <div class="flex items-center justify-center">
+              <Image
+                src={libroportada}
+                alt="Bibliografia"
+                loading="lazy"
+                class="w-full max-w-sm h-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
       </details>
 
-      <div class="mt-12 grid md:grid-cols-2 gap-10 items-center">
-        <div class="flex items-center justify-center md:order-1">
-          <img
-            src="/img/URBE_LOGO.png"
-            alt="Logo URBE"
-            loading="lazy"
-            class="w-48 md:w-60 h-auto object-contain"
-          />
-        </div>
-        <div class="md:order-2">
-          <h3 class="text-2xl font-bold text-blue-950 mb-3">
-            Universidad Rafael Belloso Chacin (URBE)
-          </h3>
-          <p class="text-slate-700 leading-relaxed">
-            Informacion institucional y aporte academico del convenio con el
-            diplomado y las iniciativas de investigacion.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <details class="group mt-12 rounded-2xl border border-amber-200/60 bg-white shadow-sm">
+        <summary class="list-none cursor-pointer px-6 py-6">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="flex items-center justify-center">
+              <Image
+                src={urbeLogo}
+                alt="Logo URBE"
+                loading="lazy"
+                class="w-48 md:w-60 h-auto object-contain"
+              />
+            </div>
+            <div class="flex items-center justify-between gap-6">
+              <div>
+                <h3 class="text-lg md:text-xl font-bold text-blue-950 mb-3">
+                  UNIVERSIDAD PRIVADA DR. RAFAEL BELLOSO CHACIN
+                  VICERRECTORADO ACADEMICO
+                  DECANATO DE EXTENSION
+                  DIRECCION DE FORMACION CONTINUA. DIPLOMADO: DOCUMENTOS DE AUDITORIA SOSTENIBLE + IA
+                </h3>
+                <p class="text-slate-700 leading-relaxed"></p>
+              </div>
+              <span
+                class="text-sm font-bold text-[#996515] uppercase tracking-widest group-open:rotate-180 transition-transform"
+                aria-hidden="true"
+              >
+                ▼
+              </span>
+            </div>
+          </div>
+        </summary>
+        <div class="border-t border-amber-200/60 px-6 pb-8 pt-6">
+          <section
+            class="py-28 md:py-36 bg-blue-950 relative overflow-visible rounded-2xl"
+          >
+            <div
+              class="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/6 blur-[120px] -z-0"
+            >
+            </div>
 
-  <section class="relative py-24 md:py-32 overflow-hidden bg-slate-50">
-    <div class="absolute inset-0 opacity-20 pointer-events-none">
-      <div
-        class="absolute -top-24 -left-24 w-96 h-96 bg-amber-200 rounded-full blur-[120px]"
-      >
-      </div>
-      <div
-        class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-400/40 rounded-full blur-[120px]"
-      >
-      </div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:40px_40px]"
-      >
-      </div>
-    </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+              <div class="grid gap-10 md:grid-cols-2 items-center">
+                <div class="text-left">
+                  <p class="text-xs md:text-sm font-bold tracking-widest text-amber-200 uppercase">
+                    Facultad de Ciencias Economicas y Sociales. Escuela de Contaduria Publica.
+                    Division de Estudios de Posgrado Especialidad en Contaduria: Mencion: Auditoria.
+                  </p>
+                  <span class="text-xs font-bold tracking-widest text-amber-200 uppercase">
+                    Formacion Profesional
+                  </span>
+                  <h2 class="text-3xl md:text-5xl font-extrabold text-white">
+                    DIPLOMADO: Documentos de Auditoria Sostenible + IA
+                  </h2>
+                  <div
+                    class="w-28 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mt-4"
+                  >
+                  </div>
+                  <h3 class="mt-6 text-lg font-semibold text-amber-200">
+                    Justificacion del Diplomado
+                  </h3>
+                  <p
+                    class="mt-2 text-sm md:text-base text-slate-300 leading-relaxed max-w-xl"
+                  >
+                    Hoy las organizaciones a nivel global fomentan las actividades
+                    profesionales —especialmente del area financiera— a alinear sus
+                    esfuerzos con las instituciones educativas para configurar nuevo
+                    conocimiento sobre las tendencias y herramientas tecnologicas (IA),
+                    basadas en la etica y con enfoque de sostenibilidad. Este diplomado,
+                    "Documentos de Auditoria Sostenible + IA", responde a esa necesidad,
+                    generando paradigmas practicos y metodologias basadas en casos que
+                    desarrollan competencias profesionales y ofertan talento humano
+                    acorde con la realidad 4.0.
+                  </p>
 
-    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
-      <span class="text-xs font-bold tracking-widest text-[#996515] uppercase">
-        Investigacion y desarrollo
-      </span>
-      <h1
-        class="text-4xl md:text-6xl font-black text-blue-950 mb-6 leading-tight"
-      >
-        Vision, Tecnologia y <br />
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#996515] via-[#D4AF37] to-[#996515]"
-          >Emprendimiento</span
-        >
-      </h1>
-      <p class="text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed">
-        Impulsando innovaciones locales con vision internacional. Desarrollo de
-        hardware y software orientados a la efectividad productiva.
-      </p>
+                  <h3 class="mt-4 text-lg font-semibold text-amber-200">
+                    Objetivo General
+                  </h3>
+                  <p
+                    class="mt-2 text-sm md:text-base text-slate-300 leading-relaxed max-w-xl"
+                  >
+                    Formar profesionales y estudiantes con etica y principios basados en
+                    la sostenibilidad en el area de la auditoria, tanto del Sector
+                    Publico como Privado, capaces de desarrollar nuevos paradigmas y
+                    habilidades cognitivas adaptandose a los entornos digitales en
+                    constante evolucion.
+                  </p>
+
+                  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+                    <div>
+                      <span class="block text-xs font-bold text-amber-200 uppercase"
+                        >Duracion</span
+                      >
+                      <span class="text-sm text-slate-300">192 horas academicas</span>
+                    </div>
+                    <div>
+                      <span class="block text-xs font-bold text-amber-200 uppercase"
+                        >Modalidad</span
+                      >
+                      <ul class="text-sm text-slate-300 list-inside list-disc">
+                        <li>Intensivo: de lunes a viernes</li>
+                        <li>Semi Intensivo: Sabatino</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative group">
+                  <div
+                    class="absolute -inset-2 rounded-[2.6rem] bg-gradient-to-tr from-[#996515] via-[#D4AF37] to-[#F9D71C] opacity-25 blur-md group-hover:opacity-40 transition-opacity"
+                  >
+                  </div>
+                  <div
+                    class="relative rounded-[2rem] overflow-hidden bg-black shadow-2xl"
+                  >
+                    <div class="w-full h-[240px] md:h-[360px] lg:h-[420px]">
+                      <video
+                        controls
+                        preload="metadata"
+                        class="w-full h-full object-cover"
+                        poster={image1.src}
+                      >
+                        <source src="/videos/diplomado.mp4" type="video/mp4" />
+                        <p class="text-white p-4">
+                          Tu navegador no soporta videos, por favor actualizalo.
+                        </p>
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-2 mt-8">
+                <div class="relative">
+                  <div
+                    id="diplomaGallery"
+                    class="flex gap-4 overflow-x-auto snap-x snap-mandatory py-4 scroll-smooth"
+                  >
+                    <div
+                      data-slide
+                      class="w-[280px] md:w-[380px] lg:w-[480px] flex-shrink-0 snap-center"
+                    >
+                      <div
+                        class="aspect-[4/3] rounded-xl bg-white p-3 shadow-lg border border-amber-200/40 flex items-center justify-center"
+                      >
+                        <Image
+                          src={image1}
+                          alt="Imagen diplomado 1"
+                          class="max-h-full w-full object-contain"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      data-slide
+                      class="w-[280px] md:w-[380px] lg:w-[480px] flex-shrink-0 snap-center"
+                    >
+                      <div
+                        class="aspect-[4/3] rounded-xl bg-white p-3 shadow-lg border border-amber-200/40 flex items-center justify-center"
+                      >
+                        <Image
+                          src={image2}
+                          alt="Imagen diplomado 2"
+                          class="max-h-full w-full object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20"
+                  >
+                    <button
+                      id="diplomaPrev"
+                      class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform"
+                      >‹</button
+                    >
+                    <button
+                      id="diplomaNext"
+                      class="w-10 h-10 rounded-full bg-white/90 text-blue-950 shadow-md hover:scale-105 transition-transform"
+                      >›</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <script type="module">
+            const container = document.getElementById("diplomaGallery");
+            const prev = document.getElementById("diplomaPrev");
+            const next = document.getElementById("diplomaNext");
+            if (container && prev && next) {
+              const getGap = () => {
+                const styles = getComputedStyle(container);
+                const gap = styles.columnGap || styles.gap || "0px";
+                return Number.parseFloat(gap) || 0;
+              };
+              const getSlideWidth = () => {
+                const slide = container.querySelector("[data-slide]");
+                if (!slide) {
+                  return container.clientWidth;
+                }
+                return Math.round(slide.getBoundingClientRect().width + getGap());
+              };
+              prev.addEventListener("click", () =>
+                container.scrollBy({ left: -getSlideWidth(), behavior: "smooth" }),
+              );
+              next.addEventListener("click", () =>
+                container.scrollBy({ left: getSlideWidth(), behavior: "smooth" }),
+              );
+            }
+          </script>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -342,7 +352,6 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 mb-16">
-        <!-- Desarrollo de Software (izq) -->
         <div
           class="p-10 rounded-[2.5rem] bg-white/5 border border-amber-500/10 backdrop-blur-md hover:border-[#D4AF37]/50 transition-all group"
         >
@@ -375,7 +384,6 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
           </ul>
         </div>
 
-        <!-- Integracion de Hardware (der) -->
         <div
           class="p-10 rounded-[2.5rem] bg-white/5 border border-amber-500/10 backdrop-blur-md hover:border-[#D4AF37]/50 transition-all"
         >
@@ -407,11 +415,10 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
         </div>
       </div>
 
-      <!-- Galería específica: dispositivo (izq grande), resultados (der grande), métricas abajo -->
       <div class="max-w-7xl mx-auto px-6 mt-8 col-span-2">
         <div class="grid md:grid-cols-2 gap-6 items-start">
           <div class="rounded-xl overflow-hidden bg-white shadow-xl">
-            <img
+            <Image
               src={dispositivo}
               alt="Dispositivo"
               loading="lazy"
@@ -419,7 +426,7 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
             />
           </div>
           <div class="rounded-xl overflow-hidden bg-white shadow-xl">
-            <img
+            <Image
               src={resultados}
               alt="Resultados del dispositivo"
               loading="lazy"
@@ -429,31 +436,67 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
         </div>
         <div class="mt-6 grid grid-cols-3 gap-4">
           <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
-            <img
+            <Image
               src={metrica1}
-              alt="Métrica 1"
+              alt="Metrica 1"
               loading="lazy"
               class="w-full h-48 md:h-64 object-contain"
             />
           </div>
           <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
-            <img
+            <Image
               src={metrica2}
-              alt="Métrica 2"
+              alt="Metrica 2"
               loading="lazy"
               class="w-full h-48 md:h-64 object-contain"
             />
           </div>
           <div class="rounded-lg shadow bg-white p-2 flex items-center justify-center">
-            <img
+            <Image
               src={metrica3}
-              alt="Métrica 3"
+              alt="Metrica 3"
               loading="lazy"
               class="w-full h-48 md:h-64 object-contain"
             />
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="relative py-24 md:py-32 overflow-hidden bg-slate-50">
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-amber-200 rounded-full blur-[120px]"
+      >
+      </div>
+      <div
+        class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-400/40 rounded-full blur-[120px]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:40px_40px]"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-[0.25em] text-[#996515] uppercase">
+        Investigacion y desarrollo
+      </h2>
+      <h1
+        class="text-4xl md:text-6xl font-black text-blue-950 mb-6 leading-tight"
+      >
+        Vision, Tecnologia y <br />
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-[#996515] via-[#D4AF37] to-[#996515]"
+          >Emprendimiento</span
+        >
+      </h1>
+      <p class="text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed">
+        Impulsando innovaciones locales con vision internacional. Desarrollo de
+        hardware y software orientados a la efectividad productiva.
+      </p>
     </div>
   </section>
 
@@ -472,70 +515,59 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-12">
-        <span class="text-xs font-bold tracking-widest text-[#996515] uppercase">
-          Edicion limitada
-        </span>
         <h2 class="text-3xl md:text-5xl font-black text-blue-950 mt-3">
-          Obten mi libro
+          Obra literaria
         </h2>
-        <p class="text-slate-700 mt-3 max-w-2xl mx-auto">
-          Una guia practica basada en el desarrollo del proyecto. Compra directa
-          con metodos de pago en esta pagina.
+        <p class="text-lg md:text-2xl font-semibold text-slate-700 mt-3 max-w-2xl mx-auto">
+          Ciencia y academia Sostenible
         </p>
       </div>
+    </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-amber-200/70 transition-all hover:-translate-y-1 hover:shadow-2xl sm:col-span-2 aspect-[16/9]"
-        >
-          <img
-            src="/img/libro0.jpeg"
+    <div class="mt-10 -mx-6 md:-mx-10 lg:-mx-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 auto-rows-[220px] sm:auto-rows-[260px] md:auto-rows-[300px] lg:auto-rows-[340px]">
+        <div class="bg-white">
+          <Image
+            src={libroportada}
+            alt="Libro portada"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="bg-white md:col-span-2 lg:row-span-2">
+          <Image
+            src={libro0}
             alt="Libro 0"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-amber-200/70 transition-all hover:-translate-y-1 hover:shadow-2xl aspect-[4/5]"
-        >
-          <img
-            src="/img/libro1.jpeg"
+        <div class="bg-white">
+          <Image
+            src={libro1}
             alt="Libro 1"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-amber-200/70 transition-all hover:-translate-y-1 hover:shadow-2xl aspect-[3/4]"
-        >
-          <img
-            src="/img/libro2.jpeg"
-            alt="Libro 2"
-            loading="lazy"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-amber-200/70 transition-all hover:-translate-y-1 hover:shadow-2xl lg:col-span-2 aspect-[21/9]"
-        >
-          <img
-            src="/img/libro3.jpeg"
+        <div class="bg-white lg:col-span-2 lg:row-span-2">
+          <Image
+            src={libro3}
             alt="Libro 3"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-amber-200/70 transition-all hover:-translate-y-1 hover:shadow-2xl aspect-[4/3]"
-        >
-          <img
-            src="/img/libro4.jpeg"
+        <div class="bg-white lg:row-span-2">
+          <Image
+            src={libro4}
             alt="Libro 4"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
       </div>
+    </div>
 
       <div class="mt-12 flex justify-center">
         <a
@@ -586,7 +618,7 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
       <div
         class="relative group rounded-[2.5rem] overflow-hidden bg-white aspect-[4/3] border border-amber-200/60 shadow-2xl"
       >
-        <img
+        <Image
           src={image3}
           alt="Foto del Evento LUZ"
           class="w-full h-full object-contain"
@@ -608,10 +640,10 @@ const reconocimiento2 = "/img/reconocimiento2.jpeg";
 
     <div class="grid md:grid-cols-2 gap-8">
       <div class="relative rounded-[2rem] bg-white border border-amber-200/40 shadow-sm flex items-center justify-center overflow-hidden hover:shadow-xl transition-all h-96">
-        <img src={reconocimiento1} alt="Reconocimiento 1" class="h-[350px] w-auto object-contain" />
+        <Image src={reconocimiento1} alt="Reconocimiento 1" class="h-[350px] w-auto object-contain" />
       </div>
       <div class="relative rounded-[2rem] bg-white border border-amber-200/40 shadow-sm flex items-center justify-center overflow-hidden hover:shadow-xl transition-all h-96">
-        <img src={reconocimiento2} alt="Reconocimiento 2" class="h-[350px] w-auto object-contain" />
+        <Image src={reconocimiento2} alt="Reconocimiento 2" class="h-[350px] w-auto object-contain" />
       </div>
     </div>
   </section>
