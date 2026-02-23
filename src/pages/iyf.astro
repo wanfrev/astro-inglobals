@@ -550,47 +550,54 @@ import luzLogo from "../assets/Logo_LUZ.gif";
       </div>
     </div>
 
-    <div class="mt-10 -mx-6 md:-mx-10 lg:-mx-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 auto-rows-[220px] sm:auto-rows-[260px] md:auto-rows-[300px] lg:auto-rows-[340px]">
-        <div class="bg-white">
+    <div class="mt-10">
+      <div class="max-w-5xl mx-auto grid gap-6 px-4">
+        <div class="rounded-xl overflow-hidden bg-white shadow-xl">
           <Image
             src={libroportada}
             alt="Libro portada"
             loading="lazy"
-            class="w-full h-full object-cover"
+            class="w-full h-auto object-contain"
           />
         </div>
-        <div class="bg-white md:col-span-2 lg:row-span-2">
+
+        <div class="rounded-xl overflow-hidden bg-white shadow-xl">
           <Image
             src={libro0}
             alt="Libro 0"
             loading="lazy"
-            class="w-full h-full object-cover"
+            class="w-full h-auto object-contain"
           />
         </div>
-        <div class="bg-white">
-          <Image
-            src={libro1}
-            alt="Libro 1"
-            loading="lazy"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="bg-white lg:col-span-2 lg:row-span-2">
-          <Image
-            src={libro3}
-            alt="Libro 3"
-            loading="lazy"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="bg-white lg:row-span-2">
-          <Image
-            src={libro4}
-            alt="Libro 4"
-            loading="lazy"
-            class="w-full h-full object-cover"
-          />
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src={libro3}
+              alt="Libro 3"
+              loading="lazy"
+              class="w-full h-64 md:h-[520px] lg:h-[600px] object-cover"
+            />
+          </div>
+
+          <div class="md:col-span-2 grid grid-rows-2 gap-4">
+            <div class="rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src={libro1}
+                alt="Libro 1"
+                loading="lazy"
+                class="w-full h-48 md:h-[260px] lg:h-[320px] object-cover"
+              />
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src={libro4}
+                alt="Libro 4"
+                loading="lazy"
+                class="w-full h-48 md:h-[260px] lg:h-[320px] object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
