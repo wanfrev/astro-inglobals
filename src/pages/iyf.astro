@@ -665,18 +665,10 @@ import luzLogo from "../assets/Logo_LUZ.gif";
             const more = document.getElementById('riesgo-more');
             if (!btn || !more) return;
             btn.addEventListener('click', function(){
-              const hiddenNow = more.classList.toggle('hidden');
-              if (hiddenNow) {
-                btn.textContent = 'Leer más';
-                btn.setAttribute('aria-expanded','false');
-              } else {
-                btn.textContent = 'Leer menos';
-                btn.setAttribute('aria-expanded','true');
-                // scroll to keep context on small screens
-                if (window.innerWidth < 768) {
-                  more.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }
+              // mostrar el contenido adicional y ocultar el botón sin hacer scroll
+              more.classList.remove('hidden');
+              btn.setAttribute('aria-expanded','true');
+              btn.style.display = 'none';
             });
           })();
         </script>
