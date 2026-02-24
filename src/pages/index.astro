@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import fedecamaras from "../assets/fedecamaras.png";
 import federacion from "../assets/federacion.jpeg";
+import codigo from "../assets/codigo.jpeg";
 ---
 
 <Layout title="Inicio">
@@ -24,10 +25,10 @@ import federacion from "../assets/federacion.jpeg";
 
     <main class="max-w-6xl mx-auto px-4 space-y-16 md:space-y-20">
       <section class="grid items-center gap-14 md:gap-16 md:grid-cols-2">
-        <div class="md:col-span-2 flex justify-center">
-          <div class="max-w-2xl text-center">
+        <div class="text-left">
+          <div class="max-w-xl">
             <h1
-              class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1]"
+              class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.1] text-left"
             >
               Auditoría inteligente para un futuro
               <span
@@ -36,12 +37,21 @@ import federacion from "../assets/federacion.jpeg";
                 sostenible
               </span>
             </h1>
-            <p
-              class="text-lg text-slate-700 mb-12 leading-relaxed mt-6"
-            >
+            <p class="text-lg text-slate-700 mb-6 leading-relaxed mt-6">
               Transformamos la certeza financiera mediante la integración de
               Inteligencia Artificial y estándares globales de sostenibilidad.
             </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <div class="rounded-xl overflow-hidden bg-white shadow-xl p-6 w-full max-w-3xl">
+            <Image
+              src={codigo}
+              alt="Código ejemplo"
+              loading="lazy"
+              class="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </section>
