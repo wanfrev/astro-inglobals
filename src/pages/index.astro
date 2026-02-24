@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import fedecamaras from "../assets/fedecamaras.png";
 import federacion from "../assets/federacion.jpeg";
 import codigo from "../assets/codigo.jpeg";
+import metodos from "../assets/metodos.jpeg";
 ---
 
 <Layout title="Inicio">
@@ -56,113 +57,60 @@ import codigo from "../assets/codigo.jpeg";
         </div>
       </section>
 
-      <section id="servicios" class="grid md:grid-cols-3 gap-8 md:gap-10">
-        <div
-          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
-        >
-          <div
-            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
-          >
-            <svg
-              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="3"
-                y="12"
-                width="3.5"
-                height="7"
-                rx="0.6"
-                fill="currentColor"></rect>
-              <rect
-                x="9.25"
-                y="8"
-                width="3.5"
-                height="11"
-                rx="0.6"
-                fill="currentColor"></rect>
-              <rect
-                x="15.5"
-                y="5"
-                width="3.5"
-                height="14"
-                rx="0.6"
-                fill="currentColor"></rect>
-            </svg>
+      <section id="servicios" class="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
+        <div class="flex items-center justify-center">
+          <div class="rounded-xl overflow-hidden bg-white shadow-xl p-4 w-full max-w-full h-[360px] md:h-[480px] flex items-center justify-center">
+            <Image src={metodos} alt="Métodos" loading="lazy" class="h-full w-auto object-contain" />
           </div>
-          <h3 class="text-xl font-bold text-blue-950 mb-4">Smart Audit</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Análisis integral de datos mediante Machine Learning para erradicar
-            el error humano.
-          </p>
         </div>
 
-        <div
-          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
-        >
-          <div
-            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
-          >
-            <svg
-              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21 11c0 5-8 11-11 11S3 16 3 11 10 2 12 2s9 3 9 9z"
-                fill="currentColor"></path>
-              <path
-                d="M8 12c2-2 6-2 8 0"
-                stroke="rgba(255,255,255,0.9)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
+        <div class="flex flex-col">
+          <div class="p-6 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group h-[360px] md:h-[480px] flex flex-col justify-center">
+            <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors">
+              <svg class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11c0 5-8 11-11 11S3 16 3 11 10 2 12 2s9 3 9 9z" fill="currentColor"></path>
+                <path d="M8 12c2-2 6-2 8 0" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-extrabold text-blue-950 mb-4">ESG Strategy</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Convertimos la responsabilidad ambiental en un activo estratégico y valor financiero.
+            </p>
+            <p class="mt-4 text-xs text-slate-700">
+              <span class="font-semibold text-blue-950">El Diferencial:</span> Alineamos sus operaciones con marcos internacionales (GRI, SASB, TCFD) y convertimos la responsabilidad corporativa en ventaja competitiva.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-blue-950 mb-4">ESG Strategy</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Convertimos la responsabilidad ambiental en un activo estratégico y
-            valor financiero.
-          </p>
+
         </div>
 
-        <div
-          class="p-8 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 group"
-        >
-          <div
-            class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-950 transition-colors"
-          >
-            <svg
-              class="w-6 h-6 text-blue-900 group-hover:text-[#D4AF37]"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 3L2 8l10 5 10-5-10-5z" fill="currentColor"></path>
-              <path
-                d="M7 13v4a5 5 0 0010 0v-4"
-                stroke="currentColor"
-                stroke-width="1.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path
-                d="M12 13v8"
-                stroke="currentColor"
-                stroke-width="1.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
+          <div class="md:col-span-2 grid md:grid-cols-2 gap-8 mt-6">
+          <div class="p-4 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
+            <div class="w-10 h-10 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-950 transition-colors">
+              <svg class="w-5 h-5 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="12" width="3.5" height="7" rx="0.6" fill="currentColor"></rect>
+                <rect x="9.25" y="8" width="3.5" height="11" rx="0.6" fill="currentColor"></rect>
+                <rect x="15.5" y="5" width="3.5" height="14" rx="0.6" fill="currentColor"></rect>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-950 mb-2">Smart Audit</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Análisis integral de datos mediante Machine Learning para erradicar el error humano.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-blue-950 mb-4">
-            Executive Academy
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Executive Knowledge Hub para dominar la IA aplicada a la alta
-            dirección financiera.
-          </p>
+
+          <div class="p-4 bg-white border-b-4 border-slate-100 hover:border-[#D4AF37] rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 group">
+            <div class="w-10 h-10 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-950 transition-colors">
+              <svg class="w-5 h-5 text-blue-900 group-hover:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 8l10 5 10-5-10-5z" fill="currentColor"></path>
+                <path d="M7 13v4a5 5 0 0010 0v-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 13v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-950 mb-2">Executive Academy</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Executive Knowledge Hub para dominar la IA aplicada a la alta dirección financiera.
+            </p>
+          </div>
         </div>
       </section>
     </main>
