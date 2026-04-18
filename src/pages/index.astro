@@ -442,6 +442,82 @@ import metodos from "../assets/metodos.jpeg";
     </div>
   </section>
 
+  <section id="solicitud" class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <div class="max-w-3xl mx-auto">
+      <div
+        class="p-10 rounded-[2.5rem] bg-blue-950 shadow-2xl relative overflow-hidden"
+      >
+        <div
+          class="absolute -top-10 -right-10 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-3xl"
+        >
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-2 relative z-10">
+          Plantilla de Solicitud
+        </h3>
+        <p class="text-sm text-slate-300 mb-8 relative z-10">
+          Complete el formulario para informacion adicional o coordinaciones.
+        </p>
+
+        <form
+          action="https://formsubmit.co/atencion@inglobals.com"
+          method="POST"
+          class="grid gap-5 relative z-10"
+        >
+          <input type="hidden" name="_subject" value="Nueva solicitud desde inglobals.com" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://inglobals.com/?enviado=1#solicitud" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Ej. Andres Martinez"
+              required
+              class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2"
+              >Correo Electronico</label
+            >
+            <input
+              type="email"
+              name="correo"
+              placeholder="correo@ejemplo.com"
+              required
+              class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2"
+              >Mensaje / Requerimiento</label
+            >
+            <textarea
+              rows="4"
+              name="mensaje"
+              placeholder="¿En que podemos asistirle?"
+              required
+              class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all resize-none"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="mt-2 w-full rounded-xl bg-gradient-to-r from-[#996515] to-[#D4AF37] px-5 py-4 text-sm font-bold text-blue-950 hover:shadow-lg hover:shadow-[#D4AF37]/20 hover:-translate-y-1 transition-all duration-300"
+          >
+            ENVIAR SOLICITUD
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="max-w-6xl mx-auto px-4 py-24 md:py-32">
     <div class="flex flex-col md:flex-row md:items-end justify-center items-center gap-4">
       <div>
