@@ -641,15 +641,52 @@ import luzLogo from "../assets/Logo_LUZ.gif";
                   submitButton.classList.add("opacity-80", "cursor-not-allowed");
                 }
 
+                const file = archivoInput instanceof HTMLInputElement ? archivoInput.files?.[0] : null;
+
                 try {
+                  if (file) {
+                    let iframe = document.getElementById("hidden_form_target");
+                    if (!(iframe instanceof HTMLIFrameElement)) {
+                      iframe = document.createElement("iframe");
+                      iframe.id = "hidden_form_target";
+                      iframe.name = "hidden_form_target";
+                      iframe.src = "about:blank";
+                      iframe.style.display = "none";
+                      document.body.appendChild(iframe);
+                    }
+
+                    const handleIframeLoad = () => {
+                      if (iframe?.dataset.submitted !== "1") return;
+                      iframe.removeEventListener("load", handleIframeLoad);
+                      iframe.dataset.submitted = "0";
+                      solicitudForm.target = "";
+                      solicitudForm.reset();
+                      showSentPopup(solicitudForm);
+                      if (submitButton instanceof HTMLButtonElement) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = "ENVIAR SOLICITUD";
+                        submitButton.classList.remove("opacity-80", "cursor-not-allowed");
+                      }
+                    };
+
+                    iframe.addEventListener("load", handleIframeLoad);
+                    iframe.dataset.submitted = "1";
+                    solicitudForm.target = iframe.name;
+                    solicitudForm.submit();
+                    return;
+                  }
+
                   const formData = new FormData(solicitudForm);
-                  
+                  const data = Object.fromEntries(formData);
+                  delete data._next;
+
                   const response = await fetch("https://formsubmit.co/ajax/atencion@inglobals.com", {
                     method: "POST",
                     headers: {
+                      "Content-Type": "application/json",
                       Accept: "application/json",
                     },
-                    body: formData,
+                    body: JSON.stringify(data),
                   });
 
                   if (!response.ok) {
@@ -663,11 +700,10 @@ import luzLogo from "../assets/Logo_LUZ.gif";
                 } catch (error) {
                   console.error("Fetch error:", error);
                   // Si falla el AJAX por CORS o de red, forzamos popup visualmente de todos modos
-                  // No hacemos .submit() nativo para no recargar y perder la pantalla.
-                  // (NOTA: Idealmente se informaria al usuario, pero como pidió exclusivamente el popup, lo mostramos).
                   solicitudForm.reset();
                   showSentPopup(solicitudForm);
                 } finally {
+                  if (file) return;
                   if (submitButton instanceof HTMLButtonElement) {
                     submitButton.disabled = false;
                     submitButton.textContent = "ENVIAR SOLICITUD";
