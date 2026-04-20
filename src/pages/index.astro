@@ -480,7 +480,6 @@ import metodos from "../assets/metodos.jpeg";
               name="nombre"
               placeholder="Ej. Andres Martinez"
               minlength="3"
-              pattern=".*\S.*"
               required
               class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all"
             />
@@ -491,8 +490,9 @@ import metodos from "../assets/metodos.jpeg";
               >Correo Electronico</label
             >
             <input
-              type="email"
+              type="text"
               name="correo"
+              inputmode="email"
               placeholder="correo@ejemplo.com"
               required
               class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all"
@@ -509,7 +509,6 @@ import metodos from "../assets/metodos.jpeg";
               placeholder="Ej. +58 424-6262639"
               autocomplete="tel"
               minlength="7"
-              pattern="^\\+?[0-9()\\-\\s]{7,20}$"
               required
               class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all"
             />
