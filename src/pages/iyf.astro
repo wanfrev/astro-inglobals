@@ -387,6 +387,7 @@ import luzLogo from "../assets/Logo_LUZ.gif";
                       id="iyfSolicitudForm"
                       action="https://formsubmit.co/atencion@inglobals.com"
                       method="POST"
+                      enctype="multipart/form-data"
                       class="grid gap-5 relative z-10"
                     >
                       <input type="hidden" name="_subject" value="Nueva solicitud desde inglobals.com" />
@@ -449,6 +450,19 @@ import luzLogo from "../assets/Logo_LUZ.gif";
                           required
                           class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#D4AF37] outline-none transition-all resize-none"
                         ></textarea>
+                      </div>
+                      <div>
+                        <label
+                          class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2"
+                          >Documento / Comprobante (Opcional)</label
+                        >
+                        <input
+                          type="file"
+                          name="attachment"
+                          accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"
+                          class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white file:mr-4 file:rounded-lg file:border-0 file:bg-[#D4AF37] file:px-4 file:py-2 file:text-sm file:font-bold file:text-blue-950 hover:file:bg-[#e8c55a] focus:border-[#D4AF37] outline-none transition-all"
+                        />
+                        <p class="mt-2 text-[11px] text-slate-400">Formatos permitidos: PDF, JPG, PNG, DOC y DOCX. Tamano maximo sugerido: 10 MB.</p>
                       </div>
                       <button
                         type="submit"
@@ -545,6 +559,7 @@ import luzLogo from "../assets/Logo_LUZ.gif";
             if (solicitudForm instanceof HTMLFormElement) {
               const nombreInput = solicitudForm.querySelector('input[name="nombre"]');
               const telefonoInput = solicitudForm.querySelector('input[name="telefono"]');
+              const archivoInput = solicitudForm.querySelector('input[name="attachment"]');
               const nextInput = solicitudForm.querySelector('input[name="_next"]');
 
               if (nextInput instanceof HTMLInputElement) {
@@ -574,14 +589,47 @@ import luzLogo from "../assets/Logo_LUZ.gif";
                 return true;
               };
 
+              const validarAdjunto = () => {
+                if (!(archivoInput instanceof HTMLInputElement)) return true;
+                const file = archivoInput.files?.[0];
+                if (!file) {
+                  archivoInput.setCustomValidity("");
+                  return true;
+                }
+
+                const allowedTypes = [
+                  "application/pdf",
+                  "image/png",
+                  "image/jpeg",
+                  "application/msword",
+                  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                ];
+                const maxBytes = 10 * 1024 * 1024;
+
+                if (!allowedTypes.includes(file.type)) {
+                  archivoInput.setCustomValidity("Formato no permitido. Use PDF, JPG, PNG, DOC o DOCX.");
+                  return false;
+                }
+
+                if (file.size > maxBytes) {
+                  archivoInput.setCustomValidity("El archivo supera el tamano maximo de 10 MB.");
+                  return false;
+                }
+
+                archivoInput.setCustomValidity("");
+                return true;
+              };
+
               nombreInput?.addEventListener("input", validarNombre);
               telefonoInput?.addEventListener("input", validarTelefono);
+              archivoInput?.addEventListener("change", validarAdjunto);
 
               solicitudForm.addEventListener("submit", async (event) => {
                 event.preventDefault();
                 const nombreOk = validarNombre();
                 const telefonoOk = validarTelefono();
-                if (!nombreOk || !telefonoOk || !solicitudForm.checkValidity()) {
+                const adjuntoOk = validarAdjunto();
+                if (!nombreOk || !telefonoOk || !adjuntoOk || !solicitudForm.checkValidity()) {
                   solicitudForm.reportValidity();
                   return;
                 }
@@ -595,17 +643,13 @@ import luzLogo from "../assets/Logo_LUZ.gif";
 
                 try {
                   const formData = new FormData(solicitudForm);
-                  const data = Object.fromEntries(formData);
-                  // Eliminamos _next del json porque ajax no redirecciona
-                  delete data._next;
                   
                   const response = await fetch("https://formsubmit.co/ajax/atencion@inglobals.com", {
                     method: "POST",
                     headers: {
-                      "Content-Type": "application/json",
                       Accept: "application/json",
                     },
-                    body: JSON.stringify(data),
+                    body: formData,
                   });
 
                   if (!response.ok) {
